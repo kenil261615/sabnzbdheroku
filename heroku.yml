@@ -1,5 +1,3 @@
 build:
   docker:
     web: Dockerfile
-run:
-  web: exec /app/Sabnzb/ --NoRestart --NoUpdates -p 8080
