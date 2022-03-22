@@ -12,7 +12,7 @@ LABEL maintainer="thespad"
 
 # environment settings
 ENV HOME="/config" \
-PORT=8080 \
+# PORT=8080 \
 PYTHONIOENCODING=utf-8
 
 
