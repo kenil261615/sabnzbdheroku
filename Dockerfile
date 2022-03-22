@@ -12,7 +12,7 @@ LABEL maintainer="thespad"
 
 # environment settings
 ENV HOME="/config" \
-# PORT=8080 \
+PORT=8080 \
 PYTHONIOENCODING=utf-8
 
 
@@ -89,8 +89,8 @@ RUN \
 COPY ./config /config
 
 # ports and volumes
-EXPOSE $PORT
+# EXPOSE $PORT
 # ENV LISTEN_PORT 8080 
 # PORT=8080
 VOLUME /config
-CMD exec /app/sabnzbd/Sabnzbd --NoRestart --NoUpdates -p $PORT
+CMD gunicorn --bind 0.0.0.0:$PORT wsgi
