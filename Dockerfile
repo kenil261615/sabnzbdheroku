@@ -1,5 +1,7 @@
 FROM ghcr.io/linuxserver/baseimage-alpine:3.15
 
+WORKDIR /app
+
 # set version label
 ARG UNRAR_VERSION=6.1.4
 ARG BUILD_DATE
@@ -10,6 +12,7 @@ LABEL maintainer="thespad"
 
 # environment settings
 ENV HOME="/config" \
+PORT = 8080\
 PYTHONIOENCODING=utf-8
 
 RUN \
