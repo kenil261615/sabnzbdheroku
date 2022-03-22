@@ -12,8 +12,9 @@ LABEL maintainer="thespad"
 
 # environment settings
 ENV HOME="/config" \
+PORT=8080 \
 PYTHONIOENCODING=utf-8
-PORT=8080
+
 
 RUN \
   echo "**** install packages ****" && \
