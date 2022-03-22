@@ -90,7 +90,7 @@ COPY ./config /config
 
 # ports and volumes
 # EXPOSE 8080
-ENV LISTEN_PORT 8080 
-EXPOSE 8080
+# ENV LISTEN_PORT 8080 
+PORT=8080
 VOLUME /config
-# CMD exec /app/sabnzbd/Sabnzbd --NoRestart --NoUpdates -p $PORT
+CMD exec /app/sabnzbd/Sabnzbd --NoRestart --NoUpdates -p $PORT
