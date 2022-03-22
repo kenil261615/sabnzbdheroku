@@ -12,7 +12,6 @@ LABEL maintainer="thespad"
 
 # environment settings
 ENV HOME="/config" \
-PORT = 8080
 PYTHONIOENCODING=utf-8
 
 RUN \
@@ -88,6 +87,6 @@ RUN \
 COPY ./config /config
 
 # ports and volumes
-# EXPOSE 8080
+EXPOSE 8080
 # VOLUME /config
-CMD exec /app/SABNZB/sabnzb --NoRestart --NoUpdates -p $PORT
+CMD exec /app/SABNZB/sabnzb --NoRestart --NoUpdates -p 8080
