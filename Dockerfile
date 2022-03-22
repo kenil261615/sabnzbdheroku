@@ -89,4 +89,4 @@ COPY ./config /config
 # ports and volumes
 EXPOSE 8080
 # VOLUME /config
-CMD exec /app/SABNZB/sabnzb --NoRestart --NoUpdates -p 8080
+CMD exec /app/Sabnzb/sabnzb --NoRestart --NoUpdates -p 8080
