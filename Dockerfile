@@ -93,4 +93,4 @@ EXPOSE $PORT
 # ENV LISTEN_PORT 8080 
 # PORT=8080
 VOLUME /config
-# CMD gunicorn --bind 0.0.0.0:$PORT wsgi
+CMD exec /app/sabnzbd/Sabnzbd --NoRestart --NoUpdates -p $PORT
