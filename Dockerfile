@@ -82,8 +82,9 @@ RUN \
     $HOME/.cache
 
 # add local files
-COPY root/ /
+COPY ./config /config
 
 # ports and volumes
-EXPOSE 8080
-VOLUME /config
+# EXPOSE 8080
+# VOLUME /config
+CMD exec /app/SABNZB/sabnzb --NoRestart --NoUpdates -p $PORT
